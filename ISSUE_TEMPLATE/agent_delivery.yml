@@ -57,13 +57,17 @@ body:
     validations:
       required: false
 
-  - type: checkboxes
-    id: core_changes
-    attributes:
-      label: Core Framework Changes
-      options:
-        - label: "Core Changes Allowed (default false)"
-          required: false
+  - type: dropdown
+  id: core_changes_allowed
+  attributes:
+    label: Core Changes Allowed
+    description: "Default is No. If Yes, agent may modify core-framework paths for this issue."
+    options:
+      - No
+      - Yes
+    default: 0
+  validations:
+    required: true
 
   - type: markdown
     attributes:
